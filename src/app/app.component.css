@@ -1,0 +1,9 @@
+ :host {
+  display: block;
+  height: 100vh;
+}
+
+app-floor-plan {
+  display: block;
+  height: 100%;
+}

@@ -1,156 +1,90 @@
 {
   "areas": [
     {
-      "id": "Bathroom",
-      "color": "#CDEAF5",
+      "id": "Kitchen",
+      "color": "#F6D8AE",
       "boundary": {
         "min": { "x": 0, "y": 15 },
         "max": { "x": 8, "y": 20 }
       }
     },
     {
-      "id": "Hall",
-      "color": "#F5F3CD",
+      "id": "Bathroom",
+      "color": "#CDE7F6",
       "boundary": {
-        "min": { "x": 0, "y": 12.5 },
+        "min": { "x": 0, "y": 9 },
         "max": { "x": 8, "y": 15 }
       }
     },
     {
-      "id": "Bedroom_8.40",
-      "color": "#E6CDF5",
-      "boundary": {
-        "min": { "x": 0, "y": 7.5 },
-        "max": { "x": 9, "y": 12.5 }
-      }
-    },
-    {
-      "id": "Bedroom_12.52",
-      "color": "#F5CDD8",
+      "id": "Entrance",
+      "color": "#F7F2C6",
       "boundary": {
         "min": { "x": 0, "y": 0 },
-        "max": { "x": 9, "y": 7.5 }
+        "max": { "x": 12, "y": 9 }
       }
     },
     {
-      "id": "Kitchen",
-      "color": "#D8F5CD",
+      "id": "Bedroom",
+      "color": "#F6C6D8",
       "boundary": {
-        "min": { "x": 8, "y": 15 },
-        "max": { "x": 20, "y": 20 }
+        "min": { "x": 12, "y": 0 },
+        "max": { "x": 20, "y": 9 }
       }
     },
     {
       "id": "Living Room",
-      "color": "#F5E6CD",
-      "boundary": {
-        "min": { "x": 9, "y": 0 },
-        "max": { "x": 20, "y": 15 }
-      }
+      "color": "#D9D7F6",
+      "points": [
+        { "x": 8, "y": 9 },
+        { "x": 20, "y": 9 },
+        { "x": 20, "y": 12 },
+        { "x": 12, "y": 20 },
+        { "x": 8, "y": 20 },
+        { "x": 8, "y": 15 }
+      ]
     }
   ],
   "objects": [
     {
-      "id": "door_1",
+      "id": "door_main_south",
       "type": "door",
-      "start": { "x": 6.5, "y": 15 },
-      "end": { "x": 8, "y": 15 }
-    },
-    {
-      "id": "door_2",
-      "type": "door",
-      "start": { "x": 0, "y": 13 },
-      "end": { "x": 0, "y": 14.5 }
-    },
-    {
-      "id": "door_4",
-      "type": "door",
-      "start": { "x": 9, "y": 8.5 },
-      "end": { "x": 9, "y": 10 }
-    },
-    {
-      "id": "door_5",
-      "type": "door",
-      "start": { "x": 9, "y": 5 },
-      "end": { "x": 9, "y": 6.5 }
-    },
-    {
-      "id": "door_6",
-      "type": "door",
-      "start": { "x": 18, "y": 0 },
-      "end": { "x": 19.5, "y": 0 }
-    },
-    {
-      "id": "window_1",
-      "type": "window",
-      "start": { "x": 0, "y": 9 },
-      "end": { "x": 0, "y": 10.5 }
-    },
-    {
-      "id": "window_3",
-      "type": "window",
       "start": { "x": 1.5, "y": 0 },
-      "end": { "x": 3.5, "y": 0 }
+      "end": { "x": 3, "y": 0 }
     },
     {
-      "id": "window_4",
-      "type": "window",
-      "start": { "x": 4.5, "y": 0 },
-      "end": { "x": 6.5, "y": 0 }
+      "id": "door_bathroom",
+      "type": "door",
+      "start": { "x": 3.6, "y": 9 },
+      "end": { "x": 4.8, "y": 9 }
     },
     {
-      "id": "window_5",
-      "type": "window",
-      "start": { "x": 11.5, "y": 0 },
-      "end": { "x": 13.5, "y": 0 }
+      "id": "door_bedroom",
+      "type": "door",
+      "start": { "x": 12, "y": 1.8 },
+      "end": { "x": 12, "y": 3.2 }
     },
     {
-      "id": "window_6",
+      "id": "window_bedroom_east",
       "type": "window",
-      "start": { "x": 14.5, "y": 0 },
-      "end": { "x": 16.5, "y": 0 }
+      "start": { "x": 20, "y": 3 },
+      "end": { "x": 20, "y": 6 }
     }
   ],
   "walls": [
-    {
-      "start": { "x": 0, "y": 0 },
-      "end": { "x": 20, "y": 0 }
-    },
-    {
-      "start": { "x": 20, "y": 0 },
-      "end": { "x": 20, "y": 20 }
-    },
-    {
-      "start": { "x": 20, "y": 20 },
-      "end": { "x": 0, "y": 20 }
-    },
-    {
-      "start": { "x": 0, "y": 20 },
-      "end": { "x": 0, "y": 0 }
-    },
-    {
-      "start": { "x": 0, "y": 7.5 },
-      "end": { "x": 9, "y": 7.5 }
-    },
-    {
-      "start": { "x": 0, "y": 12.5 },
-      "end": { "x": 9, "y": 12.5 }
-    },
-    {
-      "start": { "x": 0, "y": 15 },
-      "end": { "x": 8, "y": 15 }
-    },
-    {
-      "start": { "x": 9, "y": 0 },
-      "end": { "x": 9, "y": 7.5 }
-    },
-    {
-      "start": { "x": 9, "y": 7.5 },
-      "end": { "x": 9, "y": 12.5 }
-    },
-    {
-      "start": { "x": 8, "y": 15 },
-      "end": { "x": 8, "y": 20 }
-    }
+    { "start": { "x": 0, "y": 0 }, "end": { "x": 1.5, "y": 0 } },
+    { "start": { "x": 3, "y": 0 }, "end": { "x": 20, "y": 0 } },
+    { "start": { "x": 20, "y": 0 }, "end": { "x": 20, "y": 12 } },
+    { "start": { "x": 20, "y": 12 }, "end": { "x": 12, "y": 20 } },
+    { "start": { "x": 12, "y": 20 }, "end": { "x": 10, "y": 20 } },
+    { "start": { "x": 8, "y": 20 }, "end": { "x": 0, "y": 20 } },
+    { "start": { "x": 0, "y": 20 }, "end": { "x": 0, "y": 0 } },
+    { "start": { "x": 0, "y": 15 }, "end": { "x": 8, "y": 15 } },
+    { "start": { "x": 0, "y": 9 }, "end": { "x": 3.6, "y": 9 } },
+    { "start": { "x": 4.8, "y": 9 }, "end": { "x": 8, "y": 9 } },
+    { "start": { "x": 8, "y": 9 }, "end": { "x": 8, "y": 20 } },
+    { "start": { "x": 12, "y": 0 }, "end": { "x": 12, "y": 1.8 } },
+    { "start": { "x": 12, "y": 3.2 }, "end": { "x": 12, "y": 9 } },
+    { "start": { "x": 12, "y": 9 }, "end": { "x": 20, "y": 9 } }
   ]
 }
