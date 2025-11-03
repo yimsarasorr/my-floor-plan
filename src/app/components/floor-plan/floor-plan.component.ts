@@ -79,7 +79,7 @@ export class FloorPlanComponent implements AfterViewInit {
     this.camera = new THREE.OrthographicCamera(
       this.frustumSize * aspect / -2, this.frustumSize * aspect / 2, this.frustumSize / 2, this.frustumSize / -2, 1, 1000
     );
-    this.camera.position.set(0, 30, 0);
+    this.camera.up.set(0, 0, -1);
 
     this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true });
     this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
@@ -88,7 +88,9 @@ export class FloorPlanComponent implements AfterViewInit {
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.controls.enableDamping = true;
-    this.controls.enableRotate = false;
+    this.controls.enableRotate = true;
+    this.controls.minPolarAngle = 0.01;
+    this.controls.maxPolarAngle = Math.PI / 2.1;
     this.controls.enablePan = true;
     this.controls.enableZoom = true;
   }
@@ -180,9 +182,6 @@ export class FloorPlanComponent implements AfterViewInit {
 
     this.scene.add(floorGroup);
 
-    const gridHelper = new THREE.GridHelper(50, 50);
-    this.scene.add(gridHelper);
-
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
     this.scene.add(ambientLight);
     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
@@ -199,7 +198,7 @@ export class FloorPlanComponent implements AfterViewInit {
     const width = bounds.maxX - bounds.minX;
     const depth = bounds.maxY - bounds.minY;
     const maxDimension = Math.max(width, depth);
-    this.frustumSize = Math.max(20, maxDimension * 1.6);
+    this.frustumSize = Math.max(20, maxDimension * 1.2);
     const aspect = this.canvas.clientWidth / this.canvas.clientHeight;
     this.camera.left = -this.frustumSize * aspect / 2;
     this.camera.right = this.frustumSize * aspect / 2;
@@ -208,8 +207,9 @@ export class FloorPlanComponent implements AfterViewInit {
     this.camera.updateProjectionMatrix();
 
     const center = new THREE.Vector3(bounds.minX + width / 2, 0, bounds.minY + depth / 2);
-    const isoDistance = Math.max(maxDimension, 12);
-    this.camera.position.set(center.x + isoDistance, isoDistance, center.z + isoDistance);
+    const topDistance = Math.max(maxDimension, 12);
+    this.camera.position.set(center.x + 0.001, topDistance, center.z + 0.001);
+    this.camera.lookAt(center);
     this.controls.target.copy(center);
     this.controls.update();
   }
